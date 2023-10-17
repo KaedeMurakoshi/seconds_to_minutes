@@ -8,16 +8,18 @@ const int PER_MINUTE = 60;
 
 int main()
 {
-    int seconds = 0;
+    int second = 0;
     cout << "秒数を入力 > " << flush;
-    cin >> seconds;
+    cin >> second;
 
     cout << endl;
 
-    int minutes = seconds / PER_MINUTE;
-    int remainder = seconds % PER_MINUTE;
+    // 分
+    int minute = second / PER_MINUTE;
+    // 余りが秒
+    second %= PER_MINUTE;
 
-    printf("%d:%02d秒",minutes, remainder);
+    printf("%d:%02d秒",minute, second);
 }
 
 // プログラムの実行: Ctrl + F5 または [デバッグ] > [デバッグなしで開始] メニュー
